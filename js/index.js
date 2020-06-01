@@ -76,4 +76,43 @@ textContent_2.children[0].textContent=siteContent['main-content']['about-h4'];
 textContent_2.children[1].textContent=siteContent['main-content']['about-content'];
 
 
+//Middle Content
 
+let middleimg= document.querySelector("#middle-img")
+// middleimg.classList.add("middle-img")
+// middleimg.setAttribute("id","middle-img")
+middleimg.setAttribute("src",siteContent["main-content"]["middle-img-src"])
+
+let bottomContent_1=document.querySelector(".bottom-content .text-content")
+bottomContent_1.children[0].textContent=siteContent['main-content']['services-h4']
+bottomContent_1.children[1].textContent=siteContent['main-content']['services-content']
+
+let bottomContent_2=document.querySelector(".bottom-content .text-content:nth-child(2)")
+bottomContent_2.children[0].textContent=siteContent['main-content']['product-h4']
+bottomContent_2.children[1].textContent=siteContent['main-content']['product-content']
+
+let bottomContent_3=document.querySelector(".bottom-content .text-content:nth-child(3)")
+bottomContent_3.children[0].textContent=siteContent['main-content']['vision-h4']
+bottomContent_3.children[1].textContent=siteContent['main-content']['vision-content']
+
+
+let contact=document.querySelector(".contact")
+
+let br=document.createElement("br")
+
+//contact
+contact.children[0].textContent=siteContent["contact"]["contact-h4"]
+contact.children[1].textContent=siteContent["contact"]["address"]
+contact.children[2].textContent=siteContent["contact"]["phone"]
+contact.children[3].textContent=siteContent["contact"]["email"]
+
+let footer= document.querySelector("footer");
+footer.children[0].textContent=siteContent["footer"]["copyright"]
+
+
+// contact.insertBefore(br,contact.children[1])
+
+// "contact-h4" : "Contact",
+// "address" : "123 Way 456 Street Somewhere, USA",
+// "phone" : "1 (888) 888-8888",
+// "email" : "sales@greatidea.io",
