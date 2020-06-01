@@ -39,16 +39,23 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
 logo.setAttribute('src', siteContent.nav["img-src"]) // second arg is the variable. nav is object, img-src is value of that object[]
 
 
-let navNode = document.querySelector("nav")
+//console.log(siteContent.nav["nav-item-1"])
 
-console.log(siteContent.nav["nav-item-1"])
+//CTA
+let ctaText = document.querySelector(".cta-text");
+ctaText.children[0].textContent=siteContent["cta"]["h1"]
+let cta = document.getElementById("cta-img");
+cta.setAttribute('src', siteContent.cta["img-src"])
 
+let ctaButton=document.querySelector("button");
+ctaButton.textContent=siteContent["cta"]["button"]
 
 //Nav
+let navNode = document.querySelector("nav")
 navNode.childNodes[1].textContent=siteContent["nav"]["nav-item-1"]
 navNode.childNodes[3].textContent=siteContent["nav"]["nav-item-2"]
 navNode.childNodes[5].textContent=siteContent["nav"]["nav-item-3"]
@@ -68,6 +75,5 @@ textContent_1.children[1].textContent=siteContent['main-content']['features-cont
 textContent_2.children[0].textContent=siteContent['main-content']['about-h4'];
 textContent_2.children[1].textContent=siteContent['main-content']['about-content'];
 
-console.log(textContent_1)
 
 
